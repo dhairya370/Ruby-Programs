@@ -1,32 +1,33 @@
 class Clock
   
-  def initialize(h,m,s)
-    @@hours = h
-    @@minutes = m
-    @@seconds = s
+  def initialize
+    
+    print "Enter hours: "
+    @hours = gets.chomp.to_i
+    print "Enter minutes: "
+    @minutes = gets.chomp.to_i
+    print "Enter seconds: "
+    @seconds = gets.chomp.to_i
+   
   end
 
   def convert
-    if @@hours>12 
-      @@hours = @@hours - 12
-      puts "#{@@hours}:#{@@minutes}:#{@@seconds} PM "
-    else
-      puts "#{@@hours}:#{@@minutes}:#{@@seconds} PM "
-    end
-  end
 
+    h = @hours
+    m = @minutes
+    s = @seconds
+    
+    if h>=0 && h<=24 && m>=0 && m<=60 && s>=0 && s<=60  
+        time = Time.new(2023,1,10,h,m,s)
+    else
+      puts "invalid input "
+      exit
+    end
+    
+    puts time.strftime(" Time : %I %M %S %p ")
+
+  end
 end
 
-
- 
-  # print "Enter hours: "
-  # h = gets.chomp.to_i
-
-  # print "Enter minutes: "
-  # m = gets.chomp.to_i
-
-  # print "Enter seconds: "
-  # s = gets.chomp.to_i
-
-  obj = Clock.new(12,56,47)
-  obj.convert
+obj = Clock.new
+obj.convert
