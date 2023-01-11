@@ -16,19 +16,14 @@ class Calc
     case op
       when '+'
         puts num1 + num2
-        exit
       when '-'
         puts num1 - num2
-        exit
       when '*'
         puts num1 * num2
-        exit
       when '/'
         puts num1 / num2
-        exit
       else
         puts "invalid input"
-        exit
     end
     
   end

@@ -2,13 +2,13 @@ class Palindrome
   
   def initialize
     print "enter the string : "
-    @str = gets.chomp.to_s 
+    @str = gets.chomp 
   end  
 
   def check
       str = @str
       if str.reverse.upcase == str.upcase
-        puts "#{str} is palindrome"
+        p "#{str} is palindrome"
       else
         puts "Not Palindrome"
       end

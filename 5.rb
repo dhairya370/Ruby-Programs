@@ -4,7 +4,6 @@ class Prime
      @num = gets.chomp.to_i
   end
 
-  
   def check_prime(num)
     
     out = true
@@ -17,7 +16,6 @@ class Prime
      return out 
   end
 
-  
   def prime_series
     num = @num
     for i in 2..num 
