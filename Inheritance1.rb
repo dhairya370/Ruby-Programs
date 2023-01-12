@@ -5,14 +5,12 @@ class Animal
     @name = name
   end
 end
-
 class Dog < Animal
   def initialize(color)
     puts super
     @color = color
   end
 end
-
 class BadDog < Animal
   def initialize(age, name)
     @age = age

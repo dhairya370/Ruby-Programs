@@ -7,10 +7,23 @@ class Palindrome
 
   def check
       str = @str
-      if str.reverse.upcase == str.upcase
-        p "#{str} is palindrome"
-      else
-        puts "Not Palindrome"
+      str = str.upcase
+      n = str.length
+      i = 0
+      a = 1
+    
+      while i < n-1
+          if str[i] == str[n-1-i]
+          else
+            a = 0 
+            puts "Not Palindrome"
+            break 
+          end 
+        i += 1
+      end     
+            
+      if a == 1 
+        puts "#{@str} is Palindrome"
       end
   end
 end
