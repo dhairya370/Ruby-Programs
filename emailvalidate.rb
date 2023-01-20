@@ -6,6 +6,7 @@
 #   p "Please enter a valid email address"
 # end
 
-email = "testing@example.com"
+p "Please enter your email id" 
+email = gets.chomp
 
 email.match(/\A[\w.+-]+@\w+\.\w+\z/) ? p("Correct email id") : p("Please enter a valid email id")
